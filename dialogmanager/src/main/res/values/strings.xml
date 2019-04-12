@@ -1,0 +1,4 @@
+<resources>
+      <string name="app_name">DialogManager</string>
+      <string name="confirm">确定</string>
+</resources>
