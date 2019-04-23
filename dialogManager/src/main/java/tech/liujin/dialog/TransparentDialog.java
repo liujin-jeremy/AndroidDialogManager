@@ -1,4 +1,4 @@
-package tech.threekilogram.dialog;
+package tech.liujin.dialog;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
