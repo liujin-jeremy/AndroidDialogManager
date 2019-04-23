@@ -5,8 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import tech.threekilogram.dialog.DialogManager;
-import tech.threekilogram.dialog.TransparentDialog;
+import tech.liujin.dialog.DialogManager;
+import tech.liujin.dialog.TransparentDialog;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
 
