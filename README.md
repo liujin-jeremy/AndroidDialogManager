@@ -3,7 +3,7 @@
 ### 引入
 
 ```
-implementation 'tech.liujin:dialogmanager:1.0.2'
+implementation 'tech.liujin:dialogManager:1.0.2'
 ```
 
 ### 示例
