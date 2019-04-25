@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
-import tech.threekilogram.dialog.R;
 
 /**
  * @author Liujin 2019/4/12:18:34:02

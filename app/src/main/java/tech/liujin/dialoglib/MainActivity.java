@@ -1,4 +1,4 @@
-package tech.threekilogram.dialoglib;
+package tech.liujin.dialoglib;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
