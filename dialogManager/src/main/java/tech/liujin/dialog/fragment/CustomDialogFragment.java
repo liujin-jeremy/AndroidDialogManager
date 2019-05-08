@@ -1,4 +1,4 @@
-package tech.liujin.dialog;
+package tech.liujin.dialog.fragment;
 
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;

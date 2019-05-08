@@ -1,4 +1,4 @@
-package tech.liujin.dialog;
+package tech.liujin.dialog.fragment;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.TextView;
+import tech.liujin.dialog.R;
 
 /**
  * @author Liujin 2019/4/12:18:34:02

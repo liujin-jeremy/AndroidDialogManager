@@ -1,4 +1,4 @@
-package tech.liujin.dialog;
+package tech.liujin.dialog.fragment;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -11,6 +11,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
+import tech.liujin.dialog.R;
 
 /**
  * @author Liujin 2019/4/12:20:23:40
