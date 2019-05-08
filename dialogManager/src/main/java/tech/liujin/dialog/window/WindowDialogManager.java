@@ -19,9 +19,9 @@ import tech.liujin.dialog.R;
 /**
  * @author Liujin 2019/5/8:10:50:02
  */
-public class DialogWindowManager {
+public class WindowDialogManager {
 
-      private static final String TAG = DialogWindowManager.class.getSimpleName();
+      private static final String TAG = WindowDialogManager.class.getSimpleName();
 
       public static void showActivityDialogTop ( Context context, final View view ) {
 

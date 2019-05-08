@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.Toast;
 import tech.liujin.dialog.fragment.MessageDialog;
 import tech.liujin.dialog.fragment.TransparentDialog;
-import tech.liujin.dialog.window.DialogWindowManager;
+import tech.liujin.dialog.window.WindowDialogManager;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
 
@@ -72,34 +72,34 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                         break;
                   case R.id.windowShow:
                         View view = getLayoutInflater().inflate( R.layout.message_text, null );
-                        DialogWindowManager.showActivityDialogTop( this, view );
+                        WindowDialogManager.showActivityDialogTop( this, view );
                         break;
                   case R.id.skip:
                         Main2Activity.start( this );
                         break;
                   case R.id.windowBottom:
                         View view0 = getLayoutInflater().inflate( R.layout.message_text, null );
-                        DialogWindowManager.showActivityDialogBottom( this, view0 );
+                        WindowDialogManager.showActivityDialogBottom( this, view0 );
                         break;
                   case R.id.windowLeft:
                         View view1 = getLayoutInflater().inflate( R.layout.message_text, null );
-                        DialogWindowManager.showActivityDialogLeft( this, view1 );
+                        WindowDialogManager.showActivityDialogLeft( this, view1 );
                         break;
                   case R.id.windowRight:
                         View view2 = getLayoutInflater().inflate( R.layout.message_text, null );
-                        DialogWindowManager.showActivityDialogRight( this, view2 );
+                        WindowDialogManager.showActivityDialogRight( this, view2 );
                         break;
                   case R.id.check:
-                        boolean overlays = DialogWindowManager.canDrawOverlays( this );
+                        boolean overlays = WindowDialogManager.canDrawOverlays( this );
                         Toast.makeText( this, "是否可以显示" + overlays, Toast.LENGTH_SHORT ).show();
                         break;
                   case R.id.request:
-                        DialogWindowManager.requestOverDrawPermission( this, 2048 );
+                        WindowDialogManager.requestOverDrawPermission( this, 2048 );
                         break;
                   case R.id.systemTop:
                         View view3 = getLayoutInflater().inflate( R.layout.message_text, null );
                         try {
-                              DialogWindowManager.showAppDialogTop( this, view3 );
+                              WindowDialogManager.showAppDialogTop( this, view3 );
                         } catch(Exception e) {
                               e.printStackTrace();
                         }
@@ -116,10 +116,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             super.onActivityResult( requestCode, resultCode, data );
 
             if( requestCode == 2048 ) {
-                  if( DialogWindowManager.canDrawOverlays( this ) ) {
+                  if( WindowDialogManager.canDrawOverlays( this ) ) {
                         View view = getLayoutInflater().inflate( R.layout.message_text, null );
                         try {
-                              DialogWindowManager.showAppDialogTop( this, view );
+                              WindowDialogManager.showAppDialogTop( this, view );
                         } catch(Exception e) {
                               e.printStackTrace();
                         }
