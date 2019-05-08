@@ -13,9 +13,24 @@ import tech.liujin.dialog.R;
  */
 public class DialogWindowManager {
 
-      public static void showActivityDialog ( Context context, final View view ) {
+      public static void showActivityDialogTop ( Context context, final View view ) {
 
-            showActivityDialog( context, view, Gravity.TOP, R.style.windowDialogAnim, 2000 );
+            showActivityDialog( context, view, Gravity.TOP, R.style.windowDialogTopAnim, 2000 );
+      }
+
+      public static void showActivityDialogBottom ( Context context, final View view ) {
+
+            showActivityDialog( context, view, Gravity.BOTTOM, R.style.windowDialogBottomAnim, 2000 );
+      }
+
+      public static void showActivityDialogLeft ( Context context, final View view ) {
+
+            showActivityDialog( context, view, Gravity.LEFT | Gravity.TOP, R.style.windowDialogLeftAnim, 2000 );
+      }
+
+      public static void showActivityDialogRight ( Context context, final View view ) {
+
+            showActivityDialog( context, view, Gravity.RIGHT | Gravity.TOP, R.style.windowDialogRightAnim, 2000 );
       }
 
       public static void showActivityDialog (

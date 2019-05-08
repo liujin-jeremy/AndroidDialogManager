@@ -15,6 +15,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
       private Button mTrans;
       private Button mWindowShow;
       private Button mSkip;
+      private Button mWindowBottom;
+      private Button mWindowLeft;
+      private Button mWindowRight;
 
       @Override
       protected void onCreate ( Bundle savedInstanceState ) {
@@ -34,6 +37,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             mWindowShow.setOnClickListener( this );
             mSkip = (Button) findViewById( R.id.skip );
             mSkip.setOnClickListener( this );
+            mWindowBottom = (Button) findViewById( R.id.windowBottom );
+            mWindowBottom.setOnClickListener( this );
+            mWindowLeft = (Button) findViewById( R.id.windowLeft );
+            mWindowLeft.setOnClickListener( this );
+            mWindowRight = (Button) findViewById( R.id.windowRight );
+            mWindowRight.setOnClickListener( this );
       }
 
       @Override
@@ -51,10 +60,22 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                         break;
                   case R.id.windowShow:
                         View view = getLayoutInflater().inflate( R.layout.message_text, null );
-                        DialogWindowManager.showActivityDialog( this, view );
+                        DialogWindowManager.showActivityDialogTop( this, view );
                         break;
                   case R.id.skip:
                         Main2Activity.start( this );
+                        break;
+                  case R.id.windowBottom:
+                        View view0 = getLayoutInflater().inflate( R.layout.message_text, null );
+                        DialogWindowManager.showActivityDialogBottom( this, view0 );
+                        break;
+                  case R.id.windowLeft:
+                        View view1 = getLayoutInflater().inflate( R.layout.message_text, null );
+                        DialogWindowManager.showActivityDialogLeft( this, view1 );
+                        break;
+                  case R.id.windowRight:
+                        View view2 = getLayoutInflater().inflate( R.layout.message_text, null );
+                        DialogWindowManager.showActivityDialogRight( this, view2 );
                         break;
                   default:
                         break;

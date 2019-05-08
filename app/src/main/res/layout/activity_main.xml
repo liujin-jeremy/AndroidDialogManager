@@ -35,7 +35,7 @@
           android:layout_marginTop="8dp"
           android:layout_marginStart="8dp"
           android:layout_marginLeft="8dp"
-          android:text="window显示"
+          android:text="window显示 上"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toBottomOf="@+id/showMessage"/>
       <Button
@@ -48,4 +48,33 @@
           android:text="Button"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintStart_toStartOf="parent"/>
+
+      <Button
+          android:id="@+id/windowBottom"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginLeft="8dp"
+          android:text="window显示 下"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/windowShow"/>
+      <Button
+          android:id="@+id/windowLeft"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:layout_marginLeft="8dp"
+          android:text="window显示 左"
+          app:layout_constraintStart_toEndOf="@+id/windowShow"
+          app:layout_constraintTop_toTopOf="@+id/windowShow"/>
+      <Button
+          android:id="@+id/windowRight"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:layout_marginLeft="8dp"
+          android:text="window显示 右"
+          app:layout_constraintStart_toEndOf="@+id/windowBottom"
+          app:layout_constraintTop_toTopOf="@+id/windowBottom"/>
 </android.support.constraint.ConstraintLayout>
