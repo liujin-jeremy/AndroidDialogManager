@@ -3,6 +3,7 @@ package tech.liujin.dialog;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.Dialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -17,18 +18,10 @@ public abstract class CustomDialogFragment extends DialogFragment {
       protected Dialog mDialog;
       protected View   mView;
 
-      public void setView ( View view ) {
-
-            mView = view;
-            onDialogViewCreated( mView );
-      }
-
       /**
-       * 用于界面初始化
-       *
-       * @param dialogView dialog布局
+       * 创建{@link #mDialog}的显示界面
        */
-      protected void onDialogViewCreated ( View dialogView ) { }
+      protected abstract View onCreateDialogView ( Context context );
 
       @NonNull
       @Override
@@ -36,6 +29,7 @@ public abstract class CustomDialogFragment extends DialogFragment {
 
             if( mDialog == null ) {
                   AlertDialog.Builder builder = new Builder( getContext() );
+                  mView = onCreateDialogView( getContext() );
                   builder.setView( mView );
                   mDialog = builder.create();
             }

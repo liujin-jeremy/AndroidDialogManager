@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
             mShowMessage = findViewById( R.id.showMessage );
             mShowMessage.setOnClickListener( this );
-            mTrans = (Button) findViewById( R.id.trans );
+            mTrans = findViewById( R.id.trans );
             mTrans.setOnClickListener( this );
       }
 
@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
             switch( v.getId() ) {
                   case R.id.showMessage:
-                        DialogManager.createMessage( this, "新消息", "你有新的消息" ).show( getSupportFragmentManager(), null );
+                        DialogManager.createMessage( "新消息", "你有新的消息" ).show( getSupportFragmentManager(), null );
                         break;
                   case R.id.trans:
-                        TransparentDialog dialog = new TransparentDialog( this );
+                        TransparentDialog dialog = new TransparentDialog();
                         dialog.show( getSupportFragmentManager(), null );
                         break;
                   default:
